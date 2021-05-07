@@ -24,11 +24,10 @@ output_sheet['E1'].value = 'Bathrooms'
 output_sheet['F1'].value = 'PropertySubtype'
 output_sheet['G1'].value = 'Municipality'
 output_sheet['H1'].value = 'Neighborhood'
-output_sheet['I1'].value = 'Address'
-output_sheet['J1'].value = 'Latitude'
-output_sheet['K1'].value = 'Longitude'
-output_sheet['L1'].value = 'DistanceToCenter'
-output_sheet['M1'].value = 'Floor'
+output_sheet['I1'].value = 'Latitude'
+output_sheet['J1'].value = 'Longitude'
+output_sheet['K1'].value = 'DistanceToCenter'
+output_sheet['L1'].value = 'Floor'
 
 def test(dictionary, key):
 	try:
@@ -99,11 +98,10 @@ for j in json_output['elementList']:
                     output_sheet['E' + row_excel].value, output_sheet['F' + row_excel].value, \
                     output_sheet['G' + row_excel].value, output_sheet['H' + row_excel].value, \
                     output_sheet['I' + row_excel].value, output_sheet['J' + row_excel].value, \
-                    output_sheet['K' + row_excel].value, output_sheet['L' + row_excel].value, \
-                    output_sheet['M' + row_excel].value = \
+                    output_sheet['K' + row_excel].value, output_sheet['L' + row_excel].value = \
                     test(j,'url'), test(j,'price'), test(j,'size'), test(j,'rooms'), test(j,'bathrooms'), \
                     test(j,'propertyType'), test(j,'municipality'), test(j,'neighborhood'), \
-                    test(j,['address']), test(j,'latitude'), test(j,'longitude'), \
+                    test(j,'latitude'), test(j,'longitude'), \
                     str(distance(41.382542, 2.177100, j['latitude'], j['longitude'])), test(j,'floor')
     row_excel_int += 1
             
@@ -145,11 +143,10 @@ for i in selection:
                         output_sheet['E' + row_excel].value, output_sheet['F' + row_excel].value, \
                         output_sheet['G' + row_excel].value, output_sheet['H' + row_excel].value, \
                         output_sheet['I' + row_excel].value, output_sheet['J' + row_excel].value, \
-                        output_sheet['K' + row_excel].value, output_sheet['L' + row_excel].value, \
-                        output_sheet['M' + row_excel].value = \
+                        output_sheet['K' + row_excel].value, output_sheet['L' + row_excel].value = \
                         test(j,'url'), test(j,'price'), test(j,'size'), test(j,'rooms'), test(j,'bathrooms'), \
                         test(j,'propertyType'), test(j,'municipality'), test(j,'neighborhood'), \
-                        test(j,['address']), test(j,'latitude'), test(j,'longitude'), \
+                        est(j,'latitude'), test(j,'longitude'), \
                         str(distance(41.382542, 2.177100, j['latitude'], j['longitude'])),  test(j,'floor')
         row_excel_int += 1
     evaluated.append(i)
