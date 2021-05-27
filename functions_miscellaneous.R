@@ -28,7 +28,7 @@ nullify <- function(colx, coly, colz, x, y, radius, minimum){
       output[i] <- NA
     }
     if (!is.na(output[i])){
-      if (output[i] > 55){
+      if (output[i] > 55 | output[i] < 5){
         output[i] <- NA
       }
     }
